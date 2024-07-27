@@ -36,7 +36,10 @@ const FileUploadForm = ({ handleIsUpload, isUpload, isClientReady }) => {
     fetch(url, {
       method: "POST",
       body: formData,
-      // mode: "no-cors"
+      // headers: {
+      //    "Access-Control-Allow-Origin":"*"
+      // },
+      mode: "no-cors",
     })
       .then((response) => {
         if (response.ok) {
