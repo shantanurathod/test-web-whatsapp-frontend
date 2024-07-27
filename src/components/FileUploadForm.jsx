@@ -42,7 +42,7 @@ const FileUploadForm = ({ handleIsUpload, isUpload, isClientReady }) => {
       // headers: {
       //    "Access-Control-Allow-Origin":"*"
       // },
-      mode: "no-cors",
+      // mode: "no-cors",
     })
       .then((response) => {
         if (response.ok) {
