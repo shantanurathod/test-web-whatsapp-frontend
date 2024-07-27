@@ -24,7 +24,10 @@ const FileUploadForm = ({ handleIsUpload, isUpload, isClientReady }) => {
   // isClientReady = true;
   function handleFormSubmit(e) {
     e.preventDefault();
-    const url = "http://localhost:3001/";
+    const url =
+      process.env.USER === "ubuntu"
+        ? process.env.PROD_URL
+        : "http://localhost:3001/";
     const formData = new FormData();
     if (file) {
       // console.log("File type: ", file.type);
