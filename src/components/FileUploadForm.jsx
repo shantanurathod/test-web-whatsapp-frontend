@@ -36,7 +36,7 @@ const FileUploadForm = ({ handleIsUpload, isUpload, isClientReady }) => {
     for (const key in fileInfo) {
       formData.append(key, fileInfo[key]);
     }
-    fetch(url, {
+    fetch("/api/data", {
       method: "POST",
       body: formData,
       // headers: {
